@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="custom_snippet" name="Custom Snippet">
+        <section class="s_text_block" data-snippet="s_text_block" data-name="Custom Snippet">
+            <div class="container">
+                <h2 class="display-4">Hello from a custom snippet!</h2>
+                <p>This is a custom snippet added via a module.</p>
+            </div>
+        </section>
+    </template>
+</odoo>
