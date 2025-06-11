@@ -1,7 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="custom_snippet" name="Custom Snippet">
-        <section class="s_text_block" data-snippet="s_text_block" data-name="Custom Snippet">
+        <section
+            class="s_text_block o_colored_level"
+            data-snippet="custom_snippet"
+            data-name="Custom Snippet"
+            data-oe-snippet="true"
+            data-oe-options='{
+                "background_color": true,
+                "background_image": true,
+                "parallax": true,
+                "text_color": true,
+                "content_width": {
+                    "type": "select",
+                    "label": "Content Width",
+                    "options": [
+                        ["container", "Normal"],
+                        ["container-xl", "Wide"],
+                        ["container-fluid", "Full Width"]
+                    ],
+                    "target": ".container"
+                },
+                "height": {
+                    "type": "select",
+                    "label": "Height",
+                    "options": [
+                        ["", "Auto"],
+                        ["min-height-50", "50%"],
+                        ["min-height-100", "100%"],
+                        ["min-height-viewport", "Full Screen"]
+                    ]
+                },
+                "padding": true,
+                "margin": true,
+                "shape": true,
+                "animation": true,
+                "border": {
+                    "type": "select",
+                    "label": "Border Style",
+                    "options": [
+                        ["", "None"],
+                        ["border-top border-dark", "Top Border"],
+                        ["border-bottom border-dark", "Bottom Border"],
+                        ["border border-secondary", "Full Border"]
+                    ]
+                },
+                "custom_class": true,
+                "visibility": true
+            }'>
+
             <div class="container">
                 <h2 class="display-4">Hello from a custom snippet!</h2>
                 <p>This is a custom snippet added via a module.</p>
