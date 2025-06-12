@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="custom_snippet" name="Custom Snippet">
+    <template id="custom_comparison_snippet" name="Product Comparison Snippet">
         <section
-            class="s_text_block o_colored_level"
-            data-snippet="custom_snippet"
-            data-name="Custom Snippet"
+            class="s_comparison_block o_colored_level"
+            data-snippet="custom_comparison_snippet"
+            data-name="Product Comparison"
             data-oe-snippet="true"
             data-oe-options='{
                 "background_color": true,
@@ -50,8 +50,36 @@
             }'>
 
             <div class="container">
-                <h2 class="display-4">Hello from a custom snippet!</h2>
-                <p>This is a custom snippet added via a module.</p>
+                <h2 class="text-center my-5">Compare Products</h2>
+                <div class="row justify-content-center">
+                    <!-- Product Box 1 -->
+                    <div class="col-md-5 border border-secondary rounded shadow-sm p-4 mx-2 my-2 text-center">
+                        <h4 class="mb-3">Product 1</h4>
+                        <select id="product1Select" class="form-control mb-3">
+                            <option value="">Select Product 1</option>
+                        </select>
+                        <img id="product1Image" src="/web/static/src/img/placeholder.png" alt="Product 1 Image"
+                             class="img-fluid mb-3" style="max-height:200px;" />
+                        <div id="product1Details" class="text-left small">
+                            <p><strong>Specs:</strong></p>
+                            <!-- Product 1 specs here -->
+                        </div>
+                    </div>
+
+                    <!-- Product Box 2 -->
+                    <div class="col-md-5 border border-secondary rounded shadow-sm p-4 mx-2 my-2 text-center">
+                        <h4 class="mb-3">Product 2</h4>
+                        <select id="product2Select" class="form-control mb-3">
+                            <option value="">Select Product 2</option>
+                        </select>
+                        <img id="product2Image" src="/web/static/src/img/placeholder.png" alt="Product 2 Image"
+                             class="img-fluid mb-3" style="max-height:200px;" />
+                        <div id="product2Details" class="text-left small">
+                            <p><strong>Specs:</strong></p>
+                            <!-- Product 2 specs here -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </template>
