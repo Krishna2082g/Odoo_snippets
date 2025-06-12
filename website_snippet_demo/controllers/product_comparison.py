@@ -19,13 +19,15 @@ class ProductComparisonController(http.Controller):
             product = request.env['product.template'].sudo().browse(int(product_id))
             if not product.exists():
                 return {'error': 'Product not found'}
+
             return {
                 'name': product.name,
                 'list_price': product.list_price,
                 'currency': product.currency_id.symbol,
-                'description_sale': product.description_sale,
-                'image_128': product.image_128.decode('utf-8') if product.image_128 else None,
+                'description_sale': product.description_sale or '',
+                'image_128': product.image_128 or '',
             }
+
         except Exception as e:
             _logger.error(f"Error fetching product detail: {e}")
             return {'error': 'Server error'}

@@ -4,6 +4,7 @@ odoo.define('web_snippet_demo.product_comparison', function (require) {
     const publicWidget = require('web.public.widget');
     const ajax = require('web.ajax');
 
+
     publicWidget.registry.ProductComparison = publicWidget.Widget.extend({
         selector: '.s_comparison_block',
 
