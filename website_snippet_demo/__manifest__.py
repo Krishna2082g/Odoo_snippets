@@ -13,6 +13,7 @@
     'assets': {
     'web.assets_frontend': [
         'website_snippet_demo/static/src/js/product_comparison.js',
+        'website_snippet_demo/static/src/css/comparison_styles.css',
     ],
 },
 

@@ -84,12 +84,8 @@ odoo.define('web_snippet_demo.product_comparison', function (require) {
                             <li><strong>Name:</strong> ${product.name}</li>
                             <li><strong>Price:</strong> ${product.list_price} ${product.currency}</li>
                             <li><strong>Type:</strong> ${productTypeMap[product.product_type] || product.product_type}</li>
-                            <li><strong>Invoicing Policy:</strong> ${invoicePolicyMap[product.invoicing_policy] || product.invoicing_policy}</li>
                             <li><strong>Cost:</strong> ${product.cost}</li>
                             <li><strong>Category:</strong> ${product.product_category}</li>
-                            <li><strong>Internal Reference:</strong> ${product.internal_reference}</li>
-                            <li><strong>Can be Sold:</strong> ${product.can_be_sold ? 'Yes' : 'No'}</li>
-                            <li><strong>Can be Purchased:</strong> ${product.can_be_purchased ? 'Yes' : 'No'}</li>
                             <li><strong>Description:</strong> ${product.description_sale || 'N/A'}</li>
                         </ul>
                     `;
