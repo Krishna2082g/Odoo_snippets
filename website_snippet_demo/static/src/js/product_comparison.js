@@ -4,7 +4,6 @@ odoo.define('web_snippet_demo.product_comparison', function (require) {
     const publicWidget = require('web.public.widget');
     const ajax = require('web.ajax');
 
-
     publicWidget.registry.ProductComparison = publicWidget.Widget.extend({
         selector: '.s_comparison_block',
 
@@ -33,9 +32,6 @@ odoo.define('web_snippet_demo.product_comparison', function (require) {
                     );
                 });
             }
-
-            // ✅ Don't call this._super here since there's no parent method to extend
-            // return this._super(...arguments); ← removed
         },
 
         fillProductOptions: async function () {
@@ -71,10 +67,29 @@ odoo.define('web_snippet_demo.product_comparison', function (require) {
                 }
 
                 if (detailsEl) {
+                    // Convert internal values to human-readable labels
+                    const productTypeMap = {
+                        'consu': 'Consumable',
+                        'product': 'Stockable Product',
+                        'service': 'Service'
+                    };
+
+                    const invoicePolicyMap = {
+                        'order': 'Ordered quantities',
+                        'delivery': 'Delivered quantities'
+                    };
+
                     detailsEl.innerHTML = `
                         <ul class="list-unstyled">
                             <li><strong>Name:</strong> ${product.name}</li>
                             <li><strong>Price:</strong> ${product.list_price} ${product.currency}</li>
+                            <li><strong>Type:</strong> ${productTypeMap[product.product_type] || product.product_type}</li>
+                            <li><strong>Invoicing Policy:</strong> ${invoicePolicyMap[product.invoicing_policy] || product.invoicing_policy}</li>
+                            <li><strong>Cost:</strong> ${product.cost}</li>
+                            <li><strong>Category:</strong> ${product.product_category}</li>
+                            <li><strong>Internal Reference:</strong> ${product.internal_reference}</li>
+                            <li><strong>Can be Sold:</strong> ${product.can_be_sold ? 'Yes' : 'No'}</li>
+                            <li><strong>Can be Purchased:</strong> ${product.can_be_purchased ? 'Yes' : 'No'}</li>
                             <li><strong>Description:</strong> ${product.description_sale || 'N/A'}</li>
                         </ul>
                     `;
