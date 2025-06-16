@@ -22,17 +22,8 @@ class ProductComparisonController(http.Controller):
 
             return {
                 'name': product.name,
-                'list_price': product.list_price,
-                'currency': product.currency_id.symbol,
-                'description_sale': product.description_sale or '',
                 'image_128': product.image_128 or '',
-                'product_type': product.type,
-                'invoicing_policy': product.invoice_policy,
-                'cost': product.standard_price,
-                'internal_reference': product.default_code or '',
-                'product_category': product.categ_id.complete_name or '',
-                'can_be_sold': product.sale_ok,
-                'can_be_purchased': product.purchase_ok,
+                'description': product.description or '',  # Internal Notes
             }
 
         except Exception as e:

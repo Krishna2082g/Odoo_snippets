@@ -67,32 +67,25 @@ odoo.define('web_snippet_demo.product_comparison', function (require) {
                 }
 
                 if (detailsEl) {
-                    // Convert internal values to human-readable labels
-                    const productTypeMap = {
-                        'consu': 'Consumable',
-                        'product': 'Stockable Product',
-                        'service': 'Service'
-                    };
+                    // Wrap description inside a <ul> if it isn't already
+                    let descriptionHTML = product.description || '<li>No specifications provided.</li>';
 
-                    const invoicePolicyMap = {
-                        'order': 'Ordered quantities',
-                        'delivery': 'Delivered quantities'
-                    };
+                    // Make sure description is inside <ul> for proper styling and centering
+                    if (!descriptionHTML.trim().startsWith('<ul')) {
+                        descriptionHTML = `<ul>${descriptionHTML}</ul>`;
+                    }
 
                     detailsEl.innerHTML = `
-                        <ul class="list-unstyled">
-                            <li><strong>Name:</strong> ${product.name}</li>
-                            <li><strong>Price:</strong> ${product.list_price} ${product.currency}</li>
-                            <li><strong>Type:</strong> ${productTypeMap[product.product_type] || product.product_type}</li>
-                            <li><strong>Cost:</strong> ${product.cost}</li>
-                            <li><strong>Category:</strong> ${product.product_category}</li>
-                            <li><strong>Description:</strong> ${product.description_sale || 'N/A'}</li>
-                        </ul>
+                        <div class="specs-list">
+                            <h4>${product.name}</h4>
+                            ${descriptionHTML}
+                        </div>
                     `;
                 }
             } catch (err) {
                 console.error('Error fetching product detail:', err);
             }
         }
+
     });
 });
