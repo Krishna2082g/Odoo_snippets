@@ -63,7 +63,7 @@
                         <img id="product1Image" src="/web/static/src/img/placeholder.png" alt="Product 1 Image"
                              class="img-fluid rounded shadow-sm border mb-3" style="max-height:200px;" loading="lazy"/>
                         <div id="product1Details" class="text-start small specs-list">
-                            <p><strong>Specs:</strong></p>
+                            <p><strong></strong></p>
                         </div>
                     </div>
 
@@ -76,7 +76,7 @@
                         <img id="product2Image" src="/web/static/src/img/placeholder.png" alt="Product 2 Image"
                              class="img-fluid rounded shadow-sm border mb-3" style="max-height:200px;" loading="lazy"/>
                         <div id="product2Details" class="text-start small specs-list">
-                            <p><strong>Specs:</strong></p>
+                            <p><strong></strong></p>
                         </div>
                     </div>
                 </div>
@@ -84,3 +84,4 @@
         </section>
     </template>
 </odoo>
+

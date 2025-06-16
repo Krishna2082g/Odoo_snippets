@@ -1,9 +1,9 @@
 .box-wenatal {
-    background-color: #f7f2e8; /* Light cream/beige */
+    background-color: var(--primary, #bde7f8); /* Light cream/beige with fallback */
 }
 
 .box-otherbrand {
-    background-color: #fdf9f4; /* Slightly lighter beige */
+    background-color:var(--primary, #93c6e4); /* Slightly lighter beige */
 }
 
 /* Shared Box Styling */
