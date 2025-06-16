@@ -1,0 +1,191 @@
+.box-wenatal {
+    background-color: #f7f2e8; /* Light cream/beige */
+}
+
+.box-otherbrand {
+    background-color: #fdf9f4; /* Slightly lighter beige */
+}
+
+/* Shared Box Styling */
+.comparison-box {
+    border-radius: 20px;
+    border: 1px solid #e0d7c6;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    transition: all 0.3s ease;
+    min-height: 100%;
+}
+
+/* Hover Effect */
+.comparison-box:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+}
+
+/* Heading Style */
+.comparison-box h4 {
+    color: #2f4229; /* Natural deep green */
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.comparison-box select.form-select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    font-weight: 600;
+    color: #24101b; /* Blue text */
+    background-color: #f8f8f8;
+    border: 2px solid #b4c1d6;
+    border-radius: 10px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%231d4ed8' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    box-shadow: 0 0 0 2px #e0edff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.comparison-box select.form-select:hover {
+    border-color: #2563eb;
+    background-color: #f0f7ff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.comparison-box select.form-select:focus {
+    border-color: #1d4ed8;
+    box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.3);
+    background-color: #eaf2ff;
+    outline: none;
+    border-radius: 10px;
+}
+
+.comparison-box select.form-select option {
+    background-color: #faf0f0e3;
+    color: #3f3ce4; /* Blue text */
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 24px 15px; /* More space between options */
+    margin-bottom: 6px; /* Creates spacing between options in some browsers */
+    
+}
+
+.comparison-box select.form-select option:checked {
+    background-color: #77aaec;
+    color: #05a2fd;
+}
+
+
+
+/* Image Styling */
+.comparison-box img {
+    display: block;
+    margin: 0 auto 24px;
+    max-width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: contain;
+    background-color: #ffffff;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center center;
+}
+
+/* Interactive hover effect */
+.comparison-box img:hover {
+    transform: scale(1.05) rotateZ(0.5deg);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    background-color: #f9f9f9;
+    border-color: #c5d1e0;
+}
+
+
+/* Specs Styling */
+.specs-list {
+    padding-left: 0;
+    margin: 0;
+}
+
+.specs-list p {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #4d4d4d;
+}
+
+.specs-list ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.specs-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #e2e8f0;
+    font-size: 14px;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.specs-list li:before {
+    content: "✔";
+    color: #cc9d45; /* Gold checkmark */
+    font-weight: bold;
+}
+
+/* Section Title */
+.s_comparison_block h2 {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 700;
+    color: #2f4229; /* Deep green title */
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .comparison-box {
+        margin-bottom: 30px;
+    }
+
+    .comparison-box h4 {
+        font-size: 20px;
+    }
+}
+    
+.internal-notes ul {
+    list-style: disc inside;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.internal-notes li {
+    margin-bottom: 8px;
+}
+
+.internal-notes h4 {
+    color: #2f4229;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* --- ADDED TO CENTER ALIGN INTERNAL NOTES --- */
+.specs-list {
+    text-align: center;
+}
+
+.specs-list ul {
+    text-align: center;
+    display: inline-block;
+    padding-left: 0;
+}

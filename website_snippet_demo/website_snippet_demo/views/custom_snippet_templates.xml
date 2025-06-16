@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="snippet_demo" name="Demo Snippet" inherit_id="website.snippets" priority="20">
+        <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+            <t t-snippet="website_snippet_demo.custom_comparison_snippet"
+               t-thumbnail="/website_snippet_demo/static/src/img/snippet_thumb.jpg"/>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="custom_comparison_snippet" name="Product Comparison Snippet">
+
+        <section
+            class="s_comparison_block o_colored_level"
+            data-snippet="custom_comparison_snippet"
+            data-name="Product Comparison"
+            data-oe-snippet="true"
+            data-oe-options='{
+                "background_color": true,
+                "background_image": true,
+                "parallax": true,
+                "text_color": true,
+                "content_width": {
+                    "type": "select",
+                    "label": "Content Width",
+                    "options": [
+                        ["container", "Normal"],
+                        ["container-xl", "Wide"],
+                        ["container-fluid", "Full Width"]
+                    ],
+                    "target": ".container"
+                },
+                "height": {
+                    "type": "select",
+                    "label": "Height",
+                    "options": [
+                        ["", "Auto"],
+                        ["min-height-50", "50%"],
+                        ["min-height-100", "100%"],
+                        ["min-height-viewport", "Full Screen"]
+                    ]
+                },
+                "padding": true,
+                "margin": true,
+                "shape": true,
+                "animation": true,
+                "border": {
+                    "type": "select",
+                    "label": "Border Style",
+                    "options": [
+                        ["", "None"],
+                        ["border-top border-dark", "Top Border"],
+                        ["border-bottom border-dark", "Bottom Border"],
+                        ["border border-secondary", "Full Border"]
+                    ]
+                },
+                "custom_class": true,
+                "visibility": true
+            }'>
+
+            <div class="container py-5">
+                <h2 class="text-center mb-5 display-4 fw-bold text-primary"> Product Comparison</h2>
+                <div class="row justify-content-center">
+
+                    <!-- Product Box 1 (WeNatal Style) -->
+                    <div class="col-md-5 mx-3 my-2 comparison-box box-wenatal">
+                        <h4 class="mb-3 fw-semibold">Product 1</h4>
+                        <select id="product1Select" class="form-select mb-3 shadow-sm">
+                            <option value="">Select Product </option>
+                        </select>
+                        <img id="product1Image" src="/web/static/src/img/placeholder.png" alt="Product 1 Image"
+                             class="img-fluid rounded shadow-sm border mb-3" style="max-height:200px;" loading="lazy"/>
+                        <div id="product1Details" class="text-start small specs-list">
+                            <p><strong>Specs:</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Product Box 2 (Other Brand Style) -->
+                    <div class="col-md-5 mx-3 my-2 comparison-box box-otherbrand">
+                        <h4 class="mb-3 fw-semibold">Product 2</h4>
+                        <select id="product2Select" class="form-select mb-3 shadow-sm">
+                            <option value="">Select Product </option>
+                        </select>
+                        <img id="product2Image" src="/web/static/src/img/placeholder.png" alt="Product 2 Image"
+                             class="img-fluid rounded shadow-sm border mb-3" style="max-height:200px;" loading="lazy"/>
+                        <div id="product2Details" class="text-start small specs-list">
+                            <p><strong>Specs:</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>
