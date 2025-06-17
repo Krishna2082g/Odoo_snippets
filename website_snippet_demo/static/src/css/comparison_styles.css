@@ -64,21 +64,47 @@
     border-radius: 10px;
 }
 
-.comparison-box select.form-select option {
-    background-color: #faf0f0e3;
-    color: #3f3ce4; /* Blue text */
+.comparison-box select.form-select {
+    border: 2px solid #a2c3ff;
+    border-radius: 12px;
+    padding: 10px 15px;
     font-family: 'Poppins', 'Segoe UI', sans-serif;
     font-size: 16px;
-    font-weight: 800;
-    padding: 24px 15px; /* More space between options */
-    margin-bottom: 6px; /* Creates spacing between options in some browsers */
-    
+    font-weight: 600;
+    background-color: #f4f8ff;
+    color: #2a2a72;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
-.comparison-box select.form-select option:checked {
-    background-color: #77aaec;
-    color: #05a2fd;
+.comparison-box select.form-select option {
+    background: linear-gradient(145deg, #fdfbff, #f1f7ff);
+    color: #3f3ce4;
+    border: 1px solid #d3e3ff;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 700;
 }
+
+/* Selected option style */
+.comparison-box select.form-select option:checked {
+    background-color: #cde2ff;
+    color: #0b5bff;
+    font-weight: 800;
+    border: 2px solid #7bb8ff;
+    border-radius: 10px;
+}
+
+/* Optional: Hover effect for options in modern browsers */
+.comparison-box select.form-select option:hover {
+    background-color: #eef5ff;
+    color: #0044cc;
+}
+
 
 
 
